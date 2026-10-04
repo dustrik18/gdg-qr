@@ -1,0 +1,112 @@
+:root {
+    --bg: #e9edf2;
+    --card: #ffffff;
+    --text: #222222;
+    --input-bg: #ffffff;
+    --border: #cccccc;
+    --btn: #424952;
+    --btn-text: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+    --bg: #1e2227;
+    --card: #2b3038;
+    --text: #f1f1f1;
+    --input-bg: #1e2227;
+    --border: #555555;
+    --btn: #6c7a89;
+    --btn-text: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--bg);
+    transition: background 0.3s;
+}
+
+.container {
+    background: var(--card);
+    color: var(--text);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow);
+    width: 400px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--text);
+    background: var(--input-bg);
+    font-weight: bold;
+    border: 1px solid var(--border);
+    outline: 0;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 5px;
+}
+
+#imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#imgBox.show {
+    max-height: 300px;
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+#imgBox img {
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    background: var(--btn);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+.container .theme-toggle {
+    display: block;
+    width: auto;
+    margin: 0 0 10px auto;
+    padding: 6px 12px;
+    font-size: 14px;
+}
